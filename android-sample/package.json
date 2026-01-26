@@ -1,15 +1,22 @@
 {
   "name": "webdriverio-appium-app",
+  "version": "1.0.0",
+  "description": "LambdaTest WebdriverIO Appium Android Automation",
+  "main": "index.js",
   "scripts": {
-    "parallel": "./node_modules/.bin/wdio android-parallel.conf.js",
-    "parallelWeb": "./node_modules/.bin/wdio android-web-parallel.conf.js",
-    "SingleAndroidApp": "./node_modules/.bin/wdio android_ltOptions_w3c/android-app-single-ltOptions-w3c.conf.js",
-    "SingleAndroidWeb": "./node_modules/.bin/wdio android_ltOptions_w3c/android-web-single-ltOptions-w3c.conf.js"
+    "parallel": "wdio run android-parallel.conf.js",
+    "parallelWeb": "wdio run android-web-parallel.conf.js",
+    "SingleAndroidApp": "wdio run android_ltOptions_w3c/android-app-single-ltOptions-w3c.conf.js",
+    "SingleAndroidWeb": "wdio run android_ltOptions_w3c/android-web-single-ltOptions-w3c.conf.js"
   },
   "dependencies": {
-    "@wdio/cli": "^5.20.1",
-    "@wdio/local-runner": "^5.20.1",
-    "@wdio/mocha-framework": "^5.18.7",
-    "appium": "^1.22.3"
+    "@wdio/cli": "^9.1.1",
+    "@wdio/local-runner": "^9.1.1",
+    "@wdio/mocha-framework": "^9.1.1",
+    "@wdio/spec-reporter": "^9.0.0",
+    "webdriverio": "^9.1.1"
+  },
+  "devDependencies": {
+    "path": "^0.12.7"
   }
 }
