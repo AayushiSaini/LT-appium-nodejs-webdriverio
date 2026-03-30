@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        LT_USERNAME   = "aayushis"
-        LT_ACCESS_KEY = "LT_YfpWipMk0LwK9H8x5WCLawCWCmtAehrXGrGZzFXZQFXkM2u"
-        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-    }
+    LT_USERNAME   = credentials('LT_USERNAME')
+    LT_ACCESS_KEY = credentials('LT_ACCESS_KEY')
+    PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+}
 
     stages {
         stage('Install Dependencies') {
