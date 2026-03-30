@@ -72,7 +72,7 @@ set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 ### Upload Your Application
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your ___iOS___ application (.ipa file) or ___android___ application (.apk file) to the LambdaTest servers using our __REST API__. You need to provide your __Username__ and __AccessKey__ in the format `Username:AccessKey` in the __cURL__ command for authentication. Make sure to add the path of the __appFile__ in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -110,7 +110,7 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 
 **Tip:**
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any __.apk__ or __.ipa__ file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
 
 ## Run Your First Test
@@ -127,7 +127,7 @@ You need to update your capabilities in `*.config.js` files. In this sample proj
 
 <TabItem value="ios-config" label="ios-single.conf.js" default>
 
-```javascript title="ios/ios-single.conf.js"
+```javascript
 exports.config = {
   user: process.env.LT_USERNAME || "YOUR_USERNAME",
   key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
@@ -173,7 +173,7 @@ exports.config = {
 </TabItem>
 <TabItem value="android-config" label="android-single.conf.js" default>
 
-```javascript title="android/android-single.conf.js"
+```javascript
 exports.config = {
   user: process.env.LT_USERNAME || "YOUR_USERNAME",
   key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
@@ -222,11 +222,12 @@ exports.config = {
 
 **Info Note:**
 
-- You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt :link: **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**. A more Detailed Capability Guide is available [here :page_facing_up:](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/) .
+- You must add the generated __APP_URL__ to the `"app"` capability in the config file.
+- You can generate capabilities for your test requirements with the help of our inbuilt :link: __[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)__. A more Detailed Capability Guide is available [here :page_facing_up:](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/) .
 
 ## Executing The Tests
-**Step-5:** To Run Android Test 
+
+**Step-5:** To Run Android Test
 
 ```bash
 cd android-sample
@@ -242,7 +243,7 @@ npm i
 
 **Single:**
 
-- *MacOS/Linux*/Windows* 
+- *MacOS/Linux*/Windows*
 
 ```bash
 npm run SingleAndroidApp
@@ -250,16 +251,27 @@ npm run SingleAndroidApp
 
 **Parallel:**
 
-- *MacOS/Linux*/Windows* 
+- *MacOS/Linux*/Windows*
 
 ```bash
 npm run parallel
 ```
 
+__Info:__ Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-nodejs-webdriverio).
 
-**Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-nodejs-webdriverio).
+```bash
+To run single web Test on android Device: npm run SingleAndroidWeb
+```
+
+```bash
+To run Parallel web Test on android devices: npm run parallelWeb
+```
 
 ## Additional Links
+
+```bash
+
+```
 
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
@@ -304,5 +316,5 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 
 ## We are here to help you :headphones:
 
-- Got a query? we are available 24x7 to help. [Contact Us](mailto:support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-nodejs-webdriverio) 
+- Got a query? we are available 24x7 to help. [Contact Us](mailto:support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-nodejs-webdriverio)
 - For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-nodejs-webdriverio)
